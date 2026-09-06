@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FBF8FC" />
+  <meta name="description" content="Our Little Story — Rapunzel-inspired anniversary experience" />
+
+  <!-- Local/remote GLB viewer. The site still has a CSS fallback if the model is missing. -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <title>Our Little Story ✦ 4 Months</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="opening-active">
+
+  <div id="openingCurtain" class="opening-curtain" aria-hidden="true">
+    <div id="openingHearts" class="opening-hearts"></div>
+    <div class="opening-vignette"></div>
+    <div class="opening-message">
+      <span class="opening-spark">♡</span>
+      <span>our little story</span>
+    </div>
+  </div>
+
+  <div id="unlockCinematic" class="unlock-cinematic" aria-hidden="true">
+    <div class="unlock-halo"></div>
+    <div class="unlock-orbit unlock-orbit--one"></div>
+    <div class="unlock-orbit unlock-orbit--two"></div>
+    <div class="unlock-heart unlock-heart--one">♡</div>
+    <div class="unlock-heart unlock-heart--two">♡</div>
+    <div class="unlock-card-flash" aria-hidden="true">
+      <span class="unlock-card-number">#<b id="unlockNumber">01</b></span>
+      <span class="unlock-card-lock">♡</span>
+      <svg class="unlock-hearts-icon" viewBox="0 0 80 64" aria-hidden="true">
+        <path class="heart heart--big" d="M29 54C10 42 4 31 8 20c2-7 10-11 17-7 3 1.5 5 4 6 6 1-2 3-4.5 6-6 7-4 15 0 17 7 4 11-2 22-21 34Z"></path>
+        <path class="heart heart--small" d="M56 43C45 36 42 29 44 23c1.5-5 6-7 10-5 2 .8 3 2.4 3.5 3.5.7-1.1 1.7-2.7 3.5-3.5 4-2 8.5 0 10 5 2 6-1 13-12 20Z"></path>
+      </svg>
+    </div>
+    <p class="unlock-eyebrow">MEMORY UNLOCKED</p>
+    <h2 id="unlockTitle">A little memory is yours</h2>
+  </div>
+
+  <div id="ambient" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <main id="app">
+    <section id="intro" class="screen screen--active">
+      <div class="intro-particles" id="introParticles"></div>
+      <div class="intro-inner">
+        <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+        <div class="seal">♡</div>
+        <h1 id="introTitle">Our Little Story</h1>
+        <p id="introSubtitle" class="intro-copy"></p>
+        <div class="elapsed-wrap">
+          <p class="elapsed-kicker">เวลาของพวกเรา</p>
+          <div id="elapsedCalendar" class="elapsed-calendar" aria-live="polite">
+            <div class="time-block"><strong id="yearsValue">0</strong><span>ปี</span></div>
+            <div class="time-block"><strong id="monthsValue">0</strong><span>เดือน</span></div>
+            <div class="time-block"><strong id="daysValue">0</strong><span>วัน</span></div>
+            <div class="time-block"><strong id="hoursValue">0</strong><span>ชั่วโมง</span></div>
+            <div class="time-block"><strong id="minutesValue">0</strong><span>นาที</span></div>
+            <div class="time-block"><strong id="secondsValue">0</strong><span>วินาที</span></div>
+          </div>
+          <div id="elapsedTotals" class="elapsed-totals" aria-live="polite">
+            <span>รวม 0 วัน</span><span>·</span><span>0 ชั่วโมง</span><span>·</span><span>0 นาที</span><span>·</span><span>0 วินาที</span>
+          </div>
+          <p class="elapsed-start">เริ่มนับตั้งแต่ 08.05.2026 เวลา 00:18:30</p>
+        </div>
+        <button id="startBtn" class="btn btn--pink">ไปกันเลย</button>
+        <p class="tiny-note">ใส่หูฟังได้เลย ♡</p>
+      </div>
+    </section>
+
+    <section id="lobby" class="screen">
+      <div class="lobby-atmosphere" id="lobbyAtmosphere" aria-hidden="true">
+        <div class="bokeh bokeh-1"></div>
+        <div class="bokeh bokeh-2"></div>
+        <div class="bokeh bokeh-3"></div>
+        <div id="lanternLayer" class="lantern-layer"></div>
+        <div id="petalLayer" class="petal-layer"></div>
+        <div id="sparkleLayer" class="sparkle-layer"></div>
+      </div>
+      <div class="page-shell">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">OUR 4-MONTH STORY</p>
+            <h2>มีคำถาม 9 ข้อ<br>รอที่รักรักอยู่</h2>
+          </div>
+          <div class="progress-wrap">
+            <div class="progress-label"><span id="progressText">0 / 9 unlocked</span><span id="progressPct">0%</span></div>
+            <div class="progress"><span id="progressBar"></span></div>
+          </div>
+          <button id="themeToggle" class="theme-toggle" type="button" aria-pressed="false">🌙</button>
+        </header>
+        <div class="story-intro"><p id="lobbyMessage"></p></div>
+        <div id="cardGrid" class="card-grid"></div>
+        <div id="goldenUnlockArea" class="golden-unlock-area hidden">
+          <div class="golden-unlock-copy">
+            <p class="eyebrow">FINAL REWARD</p>
+            <h3>ที่รักรักเปิดความทรงจำครบทั้ง 9 ใบแล้ว</h3>
+            <p>จดหมายหนึ่งใบ และภาพทั้ง 9 ตอน กำลังรออยู่</p>
+          </div>
+          <div class="golden-actions">
+            <button id="openGoldenBtn" class="btn btn--pink btn--large">เปิดบทสุดท้าย ✦</button>
+            <button id="openTimelineBtn" class="btn btn--lavender btn--large">ดู Memory</button>
+          </div>
+        </div>
+        <div class="lobby-footer">
+          <button id="replayIntro" class="link-btn">ย้อนกลับหน้าแรก</button>
+          <button id="resetProgress" class="link-btn link-btn--muted">รีเซ็ตความคืบหน้า</button>
+          <button id="testUnlockAll" class="test-btn">🔓 TEST — ปลดล็อกไพ่ทั้งหมด</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="challenge" class="screen">
+      <div class="challenge-shell">
+        <div class="page-nav">
+          <button id="backToLobbyFromChallenge" class="back-btn">← กลับหน้าการ์ด</button>
+          <span id="challengeType" class="challenge-type">QUESTION 01</span>
+        </div>
+        <div class="challenge-top"><span id="challengeNumber" class="challenge-number">01</span></div>
+        <div id="challengeContent"></div>
+      </div>
+    </section>
+
+    <section id="reward" class="screen">
+      <div class="reward-shell">
+        <div class="page-nav page-nav--reward"><button id="backToLobbyFromReward" class="back-btn">← กลับหน้าการ์ด</button></div>
+        <div class="reward-content">
+          <p class="eyebrow">MEMORY UNLOCKED</p>
+          <div class="reward-photo-wrap"><img id="rewardImage" class="reward-photo" src="" alt="ความทรงจำของพวกเรา"></div>
+          <h2 id="rewardTitle"></h2>
+          <p id="rewardText" class="reward-text"></p>
+          <button id="nextCardBtn" class="btn btn--outline">กลับไปหน้าการ์ด</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="finale" class="screen">
+      <div class="tower-finale-shell">
+
+        <div class="page-nav tower-page-nav">
+          <button id="backToLobbyFromFinale" class="back-btn">← กลับหน้าการ์ด</button>
+          <span class="tower-chapter-label">THE FINAL CHAPTER</span>
+        </div>
+
+        <div class="tower-sky" id="towerSky" aria-hidden="true">
+          <div class="tower-moon"></div>
+          <div class="tower-moon-glow"></div>
+          <div class="tower-stars" id="towerStarField"></div>
+          <div class="tower-lanterns" id="towerLanternField"></div>
+          <div class="tower-cloud tower-cloud--one"></div>
+          <div class="tower-cloud tower-cloud--two"></div>
+        </div>
+
+        <div class="tower-heading">
+          <p class="eyebrow">THE FINAL CHAPTER</p>
+          <h1 id="towerHeading">วันนี้เป็นวันสำคัญของพวกเรา</h1>
+          <p id="towerSubtitle">คำถามทั้ง 9 พาเรามาถึงหน้าต่างบานนี้</p>
+        </div>
+
+        <div id="towerStage" class="tower-stage">
+
+          <div class="tower-model-wrap" aria-label="หอคอยแฟนตาซี">
+            <model-viewer
+              id="towerModel"
+              class="tower-model"
+              src="assets/models/tower-house.glb"
+              alt="Tower House by Quaternius"
+              camera-controls
+              disable-pan
+              interaction-prompt="none"
+              shadow-intensity="0.8"
+              exposure="0.75"
+              environment-image="neutral"
+              camera-orbit="0deg 72deg 105%"
+              field-of-view="28deg"
+            >
+              <div slot="progress-bar" class="tower-model-progress">
+                <span></span>
+              </div>
+            </model-viewer>
+
+            <div id="towerModelFallback" class="tower-model-fallback" aria-hidden="true">
+              <div class="fallback-tower-roof"></div>
+              <div class="fallback-tower-body">
+                <span class="fallback-window fallback-window--one"></span>
+                <span class="fallback-window fallback-window--two"></span>
+                <span class="fallback-window fallback-window--three"></span>
+              </div>
+              <div class="fallback-tower-base"></div>
+            </div>
+          </div>
+
+          <!-- Cinematic window layer -->
+          <div
+            id="towerWindow"
+            class="tower-window"
+            tabindex="0"
+            role="button"
+            aria-label="เปิดหน้าต่างหอคอย"
+          >
+            <div class="tower-window-sky">
+              <div class="inner-sky-stars" id="innerStars"></div>
+              <div class="inner-lanterns" id="innerLanterns"></div>
+
+              <div class="tower-window-message" id="skyMessage">
+                <div class="sky-message-title">Happy 4 Months</div>
+                <div class="sky-message-rule"></div>
+                <div id="skyLoveMessage" class="sky-love-message"></div>
+              </div>
+            </div>
+
+            <div class="window-arch">
+              <span class="arch-rim arch-rim--outer"></span>
+              <span class="arch-rim arch-rim--inner"></span>
+            </div>
+
+            <div class="window-shutter window-shutter--left">
+              <span></span><span></span><span></span>
+            </div>
+
+            <div class="window-shutter window-shutter--right">
+              <span></span><span></span><span></span>
+            </div>
+
+            <div class="window-handle">
+              <span>✦</span>
+            </div>
+          </div>
+
+          <div class="tower-light-beam"></div>
+        </div>
+
+        <div class="tower-controls">
+          <button id="openTowerBtn" class="btn btn--pink btn--large">
+            เปิดหน้าต่าง ✦
+          </button>
+          <p id="towerHint" class="tower-hint">แตะหน้าต่างหรือปุ่มด้านบนเพื่อเปิด</p>
+        </div>
+
+        <div id="towerFinalActions" class="tower-final-actions">
+          <button id="secretBtn" class="btn btn--pink">To be continued...♡</button>
+          <button id="openTimelineFromTower" class="link-btn">ย้อนดูความทรงจำทั้ง 9</button>
+        </div>
+
+        <div class="tower-attribution">
+          <span>Tower House · Quaternius · CC0</span>
+          <a href="https://poly.pizza/m/xm5cViUjra" target="_blank" rel="noopener noreferrer">ดูโมเดลต้นฉบับ</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline" class="screen">
+      <div class="scrapbook-shell">
+        <div class="page-nav page-nav--timeline">
+          <button id="backToLobbyFromTimeline" class="back-btn">← กลับหน้าการ์ด</button>
+        </div>
+
+        <div class="scrapbook-heading">
+          <p class="eyebrow">OUR MEMORY GARDEN</p>
+          <h1>รูปภาพแทนความทรงจำของพวกเราทั้ง 9 ใบ</h1>
+          <p>เหมือนรูปที่เราหยิบมาวางบนโต๊ะทีละใบ — แต่ละใบมีเรื่องราวเล็ก ๆ ของพวกเราอยู่ข้างใน</p>
+        </div>
+
+        <div class="scrapbook-desk">
+          <div class="scrapbook-paper scrapbook-paper--one"></div>
+          <div class="scrapbook-paper scrapbook-paper--two"></div>
+
+          <div class="scrapbook-doodle scrapbook-doodle--heart">♡</div>
+          <div class="scrapbook-doodle scrapbook-doodle--star">✦</div>
+          <div class="scrapbook-doodle scrapbook-doodle--flower">✿</div>
+
+          <div id="timelineList" class="scrapbook-grid" aria-label="ความทรงจำทั้ง 9"></div>
+
+          <div class="scrapbook-caption">
+            <span>little moments</span>
+            <span>✦</span>
+            <span>big feelings</span>
+          </div>
+        </div>
+
+        <div class="scrapbook-bottom">
+          <p id="scrapbookBottomText">กดรูปใดก็ได้เพื่อหยิบความทรงจำนั้นขึ้นมาดูใกล้ ๆ ♡</p>
+          <button id="timelineToLetter" class="btn btn--pink">กลับไปฉากสุดท้าย ✦</button>
+        </div>
+      </div>
+
+      <div id="memoryModal" class="memory-modal" aria-hidden="true">
+        <div class="memory-modal__backdrop" data-memory-close></div>
+
+        <div
+          class="memory-modal__dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="memoryModalTitle"
+        >
+          <button
+            class="memory-modal__close"
+            type="button"
+            aria-label="ปิดความทรงจำ"
+            data-memory-close
+          >
+            ×
+          </button>
+
+          <div class="memory-modal__photo-wrap">
+            <img id="memoryModalImage" class="memory-modal__photo" src="" alt="">
+          </div>
+
+          <div class="memory-modal__content">
+            <p id="memoryModalDate" class="timeline-date"></p>
+            <h2 id="memoryModalTitle"></h2>
+            <p id="memoryModalText"></p>
+          </div>
+
+          <div class="memory-modal__nav">
+            <button id="memoryPrevBtn" class="link-btn" type="button">← ก่อนหน้า</button>
+            <span id="memoryModalCounter">01 / 09</span>
+            <button id="memoryNextBtn" class="link-btn" type="button">ถัดไป →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="secret" class="screen">
+      <div class="secret-shell">
+        <div class="page-nav page-nav--secret"><button id="backToFinaleFromSecret" class="back-btn">← กลับไปฉากสุดท้าย</button></div>
+        <div class="secret-stars" id="secretStars"></div>
+        <p class="eyebrow">ONE LAST QUESTION</p>
+        <div class="secret-heart">♡</div>
+        <h1 id="secretQuestion">Would you choose me again?</h1>
+        <p id="secretCopy" class="secret-copy">หลังจากทุกอย่างที่เราได้ผ่านมาด้วยกัน…</p>
+        <button id="secretYesBtn" class="btn btn--pink btn--large">เลือกเธออีกครั้ง ♡</button>
+      </div>
+    </section>
+
+    <section id="secretEnd" class="screen">
+      <div class="secret-end-shell">
+        <div class="page-nav page-nav--secret-end"><button id="backToFinaleFromSecretEnd" class="back-btn">← กลับไปฉากสุดท้าย</button></div>
+        <div class="final-heart">♥</div>
+        <p class="eyebrow">AND I WOULD, TOO.</p>
+        <h1 id="secretEndTitle"></h1>
+        <p id="secretEndText" class="secret-end-copy"></p>
+        <div class="secret-end-actions">
+          <button id="secretMemoryBtn" class="btn btn--lavender">P.S. ยังมีความทรงจำอีกหนึ่งใบ…</button>
+          <button id="backToStart" class="link-btn">กลับไปดูเรื่องราวของเรา</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="secretMemory" class="screen">
+      <div class="secret-memory-shell">
+        <div class="page-nav page-nav--secret-memory"><button id="backToSecretEnd" class="back-btn">← กลับไปตอนจบ</button></div>
+        <p class="eyebrow">P.S. JUST BETWEEN US</p>
+        <h1 id="secretMemoryHeading">ความทรงจำที่ไม่ได้อยู่ในไพ่ใบไหนเลย</h1>
+        <div class="secret-memory-card">
+          <div class="secret-memory-collage" id="secretMemoryCollage"></div>
+          <div class="secret-memory-copy">
+            <div class="secret-memory-mark">♡</div>
+            <p id="secretMemoryText"></p>
+            <span id="secretMemorySign"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <audio id="bgm" loop preload="auto"></audio>
+  <audio id="sfxFlip" preload="auto"></audio>
+  <audio id="sfxSuccess" preload="auto"></audio>
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
