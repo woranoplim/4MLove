@@ -196,7 +196,7 @@ window.ANNIVERSARY = {
         "รักนะคะ",
         "รักที่สุด",
         "รักที่สุดในโลก"],
-      helperAnswer: 0,
+      helperAnswer: 4,
       rewardTitle: "คำที่อยากได้ยินที่สุด",
       rewardText: "ถ้าทั้ง 9 คำถามมีคำตอบเดียวที่ผมอยากเก็บไว้ที่สุด ก็คงเป็นคำตอบนี้แหละ ♡",
       image: "assets/photos/photo09.png",
