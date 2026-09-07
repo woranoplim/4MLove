@@ -41,7 +41,7 @@ window.ANNIVERSARY = {
       image: "assets/photos/photo01.png",
       timelineDate: "ความทรงจำที่ 01",
       timelineCaption: "ช่อดอกไม้ช่อแรกที่มีทั้งหมด 50 ดอก",
-      timelineText: "ดอกไม้หนึ่งช่อ กับหัวใจหนึ่งดวงของผม",
+      timelineText: "ดอกไม้หนึ่งช่อ กับหัวใจหนึ่งดวงของผม ผมไม่เสียใจสิ่งที่ซื้อให้คุณเลย เพราะคุณเป็นคนพิเศษเพียงหนึ่งเดียวของผม",
       wrongMessage: "ยังไม่ใช่คับ ที่รักรักลองนึกดูใหม่นะคับ 🌷",
     },
 
@@ -63,7 +63,7 @@ window.ANNIVERSARY = {
       image: "assets/photos/photo02.png",
       timelineDate: "ความทรงจำที่ 02",
       timelineCaption: "How to Train Your Dragon",
-      timelineText: "หนังเรื่องแรกของพวกเรา",
+      timelineText: "ที่ผมเอารูปนี้มาใส่เพราะผมชอบมาก มีไม่กี่รูปที่จะเห็นแบบนี้ แต่ก็อยากมีรูปที่รักรักจูบผมเหมือนกันนะ",
       wrongMessage: "ยังไม่ใช่เรื่องนี้นะ ไปจำสลับกับใครมา! ชิ 🎬",
     },
 
@@ -85,7 +85,7 @@ window.ANNIVERSARY = {
       image: "assets/photos/photo03.png",
       timelineDate: "ความทรงจำที่ 03",
       timelineCaption: "นามสกุลที่คุณจำได้แบบเป๊ะ ๆ",
-      timelineText: "รายละเอียดเล็ก ๆ ที่คุณยังจำได้",
+      timelineText: "รูปนี้พวกเรากำลังจะไปเยาวราชกัน ไปกินอาหารบรรพบุรุษ5555",
       wrongMessage: "ยังไม่ตรงนะ ลองคิดดีๆแล้วพิมพ์ใหม่นะคับ ♡",
     },
 
@@ -104,7 +104,7 @@ window.ANNIVERSARY = {
       image: "assets/photos/photo04.png",
       timelineDate: "ความทรงจำที่ 04",
       timelineCaption: "เยาวราช — ทริปแรกหลังจากที่คบกัน",
-      timelineText: "อยากไปด้วยกันอีกจังเลยคับ แต่ไม่ต้องที่นี่ก็ได้ แค่ได้อยู่กับคุณผมก็มีความสุขแล้ว",
+      timelineText: "รูปนี้ผมก็ชอบ moodเหมือนคนสมัยก่อนเวลาถ่ายรูปเลยคับ แถมได้ใส่เสื้อสีดำคู่กันอีกกก",
       wrongMessage: "ยังไม่ใช่ที่นั้นนะ ลองนึกอีกทีสิคับ 🥺",
     },
 
@@ -138,11 +138,11 @@ window.ANNIVERSARY = {
       helperOptions: ["กรุ๊ปเอ (A)", "กรุ๊ปบี (B)", "กรุ๊ปเอบี (AB)", "กรุ๊ปโอ (O)"],
       helperAnswer: 1,
       rewardTitle: "ถูกต้องแล้วค้าบบ",
-      rewardText: "จำได้ด้วย น่ารักที่สุดเยยย",
+      rewardText: "มาได้ไกลเหมือนกันนะคับ ใกล้จะครบแล้วจู้วๆ",
       image: "assets/photos/photo06.png",
       timelineDate: "ความทรงจำที่ 06",
       timelineCaption: "กรุ๊ปเลือดของผม: B",
-      timelineText: "มาได้ไกลเหมือนกันนะคับ ใกล้จะครบแล้วจู้วๆ",
+      timelineText: "ผมชอบเวลาคุณยิ้มจังเลย เหมือนโลกทั้งใบมันสดใสขึ้นกว่าเดิม 🫶",
       wrongMessage: "ไม่ถูกกกก คิดใหม่คับ 🫶",
     },
 
@@ -161,7 +161,7 @@ window.ANNIVERSARY = {
       image: "assets/photos/photo07.png",
       timelineDate: "ความทรงจำที่ 07",
       timelineCaption: "71 — เลขของเรา",
-      timelineText: "ผมชอบเลขพวกนี้นะเพราะมันเกี่ยวข้องกับคุณ แล้วคุณชอบเลขพวกนี้ไหมนะ",
+      timelineText: "ท่าซิกเนเจอร์ มีเสน่ห์มากครับ ผมชอบทุกหน้าที่คุณแสดงออกมาเลย ยกเว้นตอนร้องไห้กับโกรธนะคับ เหมือนใจจะสลาย",
       wrongMessage: "ม่ายยยถูกกกก คิดใหม่คิดอีกที ✦",
     },
 
@@ -180,7 +180,7 @@ window.ANNIVERSARY = {
       image: "assets/photos/photo08.png",
       timelineDate: "ความทรงจำที่ 08",
       timelineCaption: "สีแดง — สีโปรดของผม",
-      timelineText: "ผมก็เลยชอบคนร้อนแรงแบบคุณไงคับที่รักรัก",
+      timelineText: "ไม่รู้ทำไม เวลาผมมองคุณที่ใส่เสื้อผ้าของผมอยู่ มันมีความสุขแปลกๆ ผมไม่เคยบอกคุณเรื่องนี้แต่ผมดีใจมากคับที่คุณหยิบมาใส่",
       wrongMessage: "ยังไม่ใช่สีนี้นะ ใบ้ให้ว่าเกี่ยวกับฮีโร่ที่ชอบ 🎨",
     },
 
@@ -202,7 +202,7 @@ window.ANNIVERSARY = {
       image: "assets/photos/photo09.png",
       timelineDate: "ความทรงจำที่ 09",
       timelineCaption: "รักที่สุดในโลก",
-      timelineText: "ผมรักคุณที่สุดในโลกเยยยคับ",
+      timelineText: "อยากไปออกกำลังกายกับคุณอีกจังเลย อยากไปเดินเดิน เข้ายิม ตีแบด ว่ายน้ำแล้วก็....🫣 ",
       wrongMessage: "ม่ายช่ายยย ต้องรักมากกว่านั้นอีกคับ 🥺♡",
     }
   ],
